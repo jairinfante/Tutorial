@@ -1,0 +1,127 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --inicio-secundario: #1f3438;
+
+    --fuente-principal: 3.8 rem;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px; /*1rem = 10px */
+    font-family: 'Krub', sans-serif;
+    font-weight: 400;
+}
+h1{
+    font-size: var(--fuente-principal);
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1, h2, h3{
+    text-align:center;
+}
+.star{
+    background-color: var(--inicio-secundario);
+    padding: 1px;
+    color: var(--blanco);
+}
+.titulo span{
+    font-size: 2rem;
+}
+.titulo span:hover{
+    color: red;
+}
+.contenedor{
+    max-width: 120rem;
+   /*  margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+
+    margin: 0 auto; /* arriba, abajo, derecha, izquiera */
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem, 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    text-align: center;
+}
+@media (min-width: 480px ) {
+    .boton{
+        width: auto;
+    }
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative; /* siempre el padre debe tener posicion relativa */
+}
+.contenido-hero{
+    position: absolute;
+   /* background-color: rgba( 0,0,0, .7);  anterior*/
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* para centrar */
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
