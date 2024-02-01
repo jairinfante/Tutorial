@@ -4,6 +4,7 @@
     --primario: #ffC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
     --inicio-secundario: #1f3438;
 
     --fuente-principal: 3.8 rem;
@@ -19,7 +20,9 @@ html{
 body{
     font-size: 16px; /*1rem = 10px */
     font-family: 'Krub', sans-serif;
-    font-weight: 400;
+    background-image: linear-gradient(to top,  var(--grisClaro) 0%, var(--blanco) 100%);
+    /* font-weight: 400; */
+    
 }
 h1{
     font-size: var(--fuente-principal);
@@ -46,6 +49,7 @@ h1, h2, h3{
 }
 .contenedor{
     max-width: 120rem;
+    margin: 0 auto;
    /*  margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
